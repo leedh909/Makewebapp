@@ -1,0 +1,55 @@
+1/14(화)
+
+*웹페이지에 코드 삽입하기 (파일 phpjs/1.php )
+<?php  ....  > php코드 작성방법 
+php에서 무언가 출력할때 echo 라고 쓴다. 문자 삽입시 "Hello world" 라고 쓴다.
+php엔진에 의해 해석하면 웹페이지에 소스보기할시 보이지 않는다.
+(=결과값만 보내준다.)
+<script 태크> 안에 javascript 언어를 쓰면 된다.
+document.write("Hello world"); javascript에서 출력하는 방법
+<script 태그>는 웹페이지에서 소스보기할시 어떻게 입력한지 형태를 보여준다.
+((((php와 javascript 차이)))는 웹페이지 소스 보기할시 결과값이랑 입력값이 보이는 차이이다.
+php는 서버쪽에서 작동하고 javascript는 웹브라우저(=클라이언트)쪽에서 작동한다.
+
+*데이터타입과 연산자 (파일 phpjs/2.php )
+javascript는 숫자를 ""로 묶으면 문자로 인식, 그냥 쓰면 숫자로 인식
+php는 숫자를 "10"+"10"로 묶으면 숫자로 인식, "10"."10"로 쓰면 문자로 인식
+
+*(1-1)디버깅 (파일 phpjs/3.php )
+디버그: 프로그램이 오류를 해결하는 과정을 의미.
+웹>도구 더 보기>개발자도구  or  (Ctrl + Shift + i)
+에러발생시 아무것도 안뜨면 wampstack>apache2>logs>error.log를 열고 마지막 줄을 본다.
+
+*(1-2)보충수업(화면에 php 에러 표시하기)
+php.ini 에서 display error를 찾아 on로 바꿔주면 된다.
+
+*변수 (파일 phpjs/4.php )
+javascript는 name="안녕";  PHP는 $name="안녕" 이라고 써야한다.
+변수쓰는 이유는 코드를 최대한 변경시키지 않기 위해서이다.(=안전성을 위해)
+
+*비교 (파일 phpjs/5.php )
+비교연산자를 사용해서 true, false 라는 값을 가져온다.
+(javascript랑 php 결과값 boolean은 표현이 같다.)
+php는 var_dump(1==1); 로 정확한 비교를 알수 있다. 그냥 했을 경우, 결과값만 보여주기때문에 자세히 알수없다.
+
+*조건문 (파일 phpjs/6.php )
+if문을 이용한 참/거짓 판별
+
+*(2-1)로그인 기능 만들기 -자바스크립트로 로그인 기능 구현하기 (파일 phpjs/7.php )
+script 태그에서 prompt("비밀번호")로 password를 입력받을 수 있다.
+
+*(2-2)php로 로그인 기능 구현하기
+결과값을 제출했을때 기본창(8-1.php)과는 달리 새로운창(8-2.php)이 생긴다.
+
+*(2-3)php로 로그인 기능 구현하기2(파일 phpjs/8-1.php, phpjs/8-2.php )
+<form action="8-2.php">
+   <p>비밀번호를 입력해주세요.</p> 
+   <input type="text" name="password">    text상자생김
+   <input type="submit">             제출버튼이 생긴다.
+</form>                          form안의 결과값이 8-2.php 로 보내진다.
+8-2.php에서 echo $_GET["password"]; 를 입력시 8-1.php에 있던 password값을 가져올 수 있다. 
+
+
+
+
+

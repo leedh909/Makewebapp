@@ -1,0 +1,42 @@
+1/9(목)
+
+*웹 애플리케이션을 만드는 순서
+( 기획(계획) - 디자인 - 개발 - 테스트 )  반복
+-복잡도
+ex) 체크박스의 경우의 수 2의 지수배를 체크해야된다. 
+
+*구상
+어떻게 만들것인지.
+
+*기획
+UI모델링(User Interface) = 사용자가 시스템을 제어하는 조작장치
+= 사용자의 입장에서 동작하는 기능을 가상으로 만들어 보기
+모델링도구 (손그림, Pencil, balsamiq, PowerPoint)
+https://opentutorials.org/course/221/1416  - (Pencil 사용방법)
+
+*인터넷과 웹의 역사
+다른말이다. - 인터넷안에 웹이 포함되어 있는것. 인터넷(FTP, 웹, 이메일...등)
+팀버너스리(웹은 만든 사람, 최초의 웹브라우저 만든사람)
+
+*서버와 클라이언트
+서버(웹서버 설치된 컴퓨터의미), 클라이언트(웹브라우저 설치된 컴퓨터의미)
+요청(클라이언트가 서버에게 정보를 요구)
+응답(클라이언트가 요구한 웹페이지를 찾아서 보내줌)
+웹서버(Apache, Nginx, IIS)
+http://bitnami.com/stack/wamp (운영체제:window식 다운로드 주소)
+
+*윈도우에 웹서버 설치
+http://bitnami.com/stack/wamp (운영체제:window식 다운로드 주소)
+C://에 비트나비>아파치2>htdocs파일안에 index파일이 있다.
+localhost/index.html
+htdocs=Document Root(문서의 최상위 디렉토리)
+localhost/helloworld.html (메모장으로 작성, 파일명.html 저장시 모든파일, UTF-8로 htdocs안에 저장)
+
+
+
+
+
+
+
+
+

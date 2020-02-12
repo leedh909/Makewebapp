@@ -1,0 +1,19 @@
+1/12(일)
+
+*(1-1)CSS 이론 -CSS의 기본문법(파일  CSS/ex_css_1.html )
+스타일을 내기위한 언어이다. html과는 다른 독립된 언어지만 html과 함께 사용해야 한다.
+<head>라인에 <style 태그> 등장시 css문법이 시작한다는걸 의미
+h1{color:red}  ===h1은 "선택자", { }사이에 있는건 "서술" 이라고 말한ㄷ.
+
+*(1-2)선택자 심화학습
+<style 태그> 안에서 활용방법에 대해서 배움. 
+용어들을 다 외울 필요는 없다.
+
+*(1-3)박스모델(파일 CSS/ex_css_2.html )
+border : 테두리
+solid : 실선, dotted : 점선
+< id="이름">으로 작성하고 #이름 으로 속성값을 정의해주면 해당id에만 속성값이 적용됨.
+박스모델(border, height, padding, widh, margin) : css를 통해서 html을 꾸민다.
+
+*(1-4)float(파일 CSS/ex_css_3.html )
+<style 태그> 안에다가 img{ float : 방향} 입력을 하면 그림 옆 빈공간을 없애고 글을 채운다.

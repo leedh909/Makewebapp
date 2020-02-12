@@ -1,0 +1,67 @@
+2/3(월)
+
+*(1-1)데이터베이스(MySQL) 이론 -데이터베이스 이론1
+정보가 위치하는 곳=데이터베이스
+파일(File)=원시적인 데이터관리수단
+데이터베이스vs파일 -->데이터베이스win Y?) 안전하다, 백업기능, 빠르다(인덱스), 프로그래밍적 제어가능
+관계형데이터베이스(MySQL, 오라클, MS-SQL 등)
+MySQL == MariaDB 호환가능
+표==table 시스템 ==excel -->(정보를 구조화시켰다.)
+데이터베이스 vs excel --> SQL 차이가 있다. 컴퓨터에게 구조화된 정보를 질의한다.
+PHP파일은 MySQL 서버에 정보를 요청할 수 있다.
+
+*(1-2)데이터베이스 이론2
+명령프롬프트를 실행하고
+C:\Bitnami\wampstack-7.3.13-0\mysql\bin 으로 가서
+mysql -hlocalhost -uroot -p 
+(-h : mysqlmonitor 가 존재하는 곳 지정=localhost / -u : 사용자 아이디 / -p : 비밀번호 )
+데이터베이스 서버에 접속하는 방법을 설명한 것이다.
+
+*(1-3)데이터베이스 이론3
+데이터베이스=디렉토리 , Table = file 이라고 할 수 있다.
+show databases; ==데이터베이스들을 보여달라.
+CREATE DATABASES 데이터베이스명 CHARACTER SET utf8 COLLATE utf8_general_ci; == (이름)데이터베이스를 만들다.
+use 데이터베이스명; == 데이터베이스명으로 이동하다.
+CREATE TABLE `테이블명`(속성값들지정); ==테이블을 만들다.
+CREATE TABLE `topic` (
+`id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) NOT NULL,
+  `description` text NOT NULL,
+  `author` varchar(30) NOT NULL,
+  `created` datetime NOT NULL,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+(AUTO_INCREMENT == 행이 추가 될때마다 값이 1씩 증가한다는 의미이다.)
+INSERT INTO `테이블명` (컬럼값,속성값,...) VALUES('데이터','데이터',...); ==테이블에 데이터를 추가하겠다.
+
+*(2-1)MySQL 실습- 실습1
+<?php
+$conn= mysqli_connect("localhost","root",eogml909);  ==서버 접속
+ mysqli_select_db($conn,"opentutorials");  == DB 선택
+?>    (===php파일안에서 mysql 을 실행하는 방법)
+
+*(2-2)실습2( 파일 php/index.php )
+$result = mysqli_query($conn,"SELECT * FROM topic"); == 조회
+연관배열(associative array)==어떤한 값에 이름을 주는것
+while($row = mysqli_fetch_assoc($result)){
+echo '<li><a href="http://localhost/php/index.php?id='.$row['id'].'">'.$row['title'].'</a></li>'."\n";	}
+
+*(2-3)실습3( 파일 php/index.php , php/style.css )
+style.css 파일을 설정하면서 padding값 조정 및 본문의 width값을 조정해줬다.
+본문을 파일이 아닌 데이터베이스와 연동하여 데이터를 불러왔다.
+id값이 없을때는 본문을 불러오지 않게 설정하였다.
+
+*(2-4)실습4( 파일 php/3.html , php/3.php )
+사용자가 입력한 정보를 서버로 전송할 때 사용하는 것은 == form 이다.
+form 을 통해서 get, post 방법으로 정보를 보낼 수 있다.
+method="GET" 은 url에는 표준 길이가 있다. 그래서 그 값을 넘으면 전송할 수 없다라고 뜬다.
+method="POST" 은 url 길이에 상관없이 데이터를 보내준다.
+
+*(2-5)실습5 ( 파일 php/write.php , php/process.php )
+Redirection은 작업을 마친후 우리가 원하는 페이지로 돌아간다.== header('Location: http://localhost/php/index.php');
+
+
+
+
+
+

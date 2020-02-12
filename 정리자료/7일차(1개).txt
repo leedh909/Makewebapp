@@ -1,0 +1,51 @@
+1/21(화)
+
+*(1-1)자바스크립트 실습 -실습1( 파일 javascript/1.html )
+<input 태그> 입력할 수 있는 장치들이 들어있다.
+type별로 button, checkbox, text 등이 있다.
+onclick 은 사용자가 버튼을 클릭했을때 자바스크립코드를 기억하다가 실행해주는 것이다.
+(=이벤트 프로그램)이라고한다.
+script 태그 안에 alert 는 경고창을 띄우는 것이다.
+onfocus ="alert('focus')" onblur="alert('blur')"
+//포커스 했을때 경고문 다른곳을 건드렸을때 경고문이 나오는 코드이다.
+
+*(1-2)실습2( 파일 javascript/1.html )
+onclick="alert('document.getElementById(user_input).value')" 로 입력하면 text의 값이 나온다.
+
+*(1-3)실습3( 파일 javascript/2.html )
+"Ctrl + Alt + 방향키" ====커서가 다음 코딩 입력할 장소로 옮겨진다.
+그룹핑=클래스 라고한다. 클래스는 " . "을 써서 입력해야한다.
+클래스로 묶어서 변형이 가능하다.
+javascript 는 html 언어를 제어할 수 있다.
+
+*(1-4)실습4( 파일 html/page_vc.html , page_op.html , page_html.html , index3.html )
+<div태그> 단순히 어떤 태그들을 묶는데 사용한다.
+onclick을 통해서 바탕색을 white와 black 으로 바꿀수 있다.
+
+*(1-5)실습5
+onclick 부분을 제거하고 id 값을 따로 넣는다. body마지막 위쪽에 script 태그를 넣는다.
+wbtn = document.getElementById("white_btn");
+wbtn.addEventListener('click',function(){
+ document.getElementById('target').className='black'; } )
+//변수명을 지정하고 이벤트를 생성하여 변화할 값을 만들어준다.
+이걸 각각의 파일에 복붙하는 것보다 script.js 파일을 만들어서 <script src="주소명"></script>
+하면 지져분했던 코드를 깔끔하게 정리할 수 있다.
+*****핵심 !!!!!*****
+[ html 은 정보 / css 는 html을 디자인 / javascript 는 html을 제어 ]
+
+*(1-6)Sound of coding
+지금까지 했던 코딩 복습
+
+*(1-7)지금까지 배운 것만으로도 할 수 있는 일
+댓글 서비스(DISQUS)를 붙여본다. 댓글을 달면 이메일로 보내지고 이메일보내면 답글이 달린다.
+채팅기능(tawk)도 붙여본다.
+//댓글기능 추가 방법
+DISQUS >(회원가입) get started > i want to install disqus on my site > 사이트이름 넣고 생성
+> universal code > 붙이고 싶은곳에 복붙 > 댓글 서비스 추가됨
+//채팅기능 추가 방법
+www.tawk.to >(회원가입) login > 관리자화면 >언어(한국어) > admin > property 추가 
+> body 위에 복사 > 채팅기능이 추가됨
+
+
+
+

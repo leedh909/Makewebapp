@@ -1,0 +1,42 @@
+2/5(수)
+
+*관계형 데이터베이스 이론
+데이터베이스>관계형데이터베이스(MySQL,MSSQL,ORACLE)
+SQL문을 이용하여 여러개의 테이블을 조합하여 가상의 테이블을 만든다.
+
+*(2-1)관계형 데이터베이스 실습 -실습1 ( 파일 php/index.php )
+mysql에서 topic과 user 테이블을 만들었다.
+중간에 author를 추가하였다.
+
+*(2-2)실습2 (파일 php/index.php )
+sql문을 변경하여 테이블을 JOIN 하였다.
+그 결과 topic.author 값을 user.name 값으로 변경하였다.
+
+*(2-3)실습3 (파일 php/index.php , php/process.php )
+테이블을 추가할때 참조하는 테이블의 값을 알아야한다.
+var_dump($row); ==입력값으로 들어간 $row의 정보를 상세하게 보여주는 내장함수.
+num_rows의 값을 알아내는 것은 var_dump를 쓴다.
+$result->num_rows; == result에 num_rows값을 넣겠다.
+mysqli_query($conn,$sql); == sql 값을 mysql로 보내다.
+
+*(3-1)보안 -보안1
+비극을 경험해봐야 중요성을 안다. 보안은 가장 중요하다.
+
+*(3-2)보안2 (파일 php/5.php , php/index.php )
+&lt; ==" < " 처럼 나온다.
+<?php
+echo htmlspecialchars(' <a href="http://opertutorials.org/course/1">생활코딩</a>');
+?>  === 이렇게하면 웹페이지에서 입력한 대로 결과값이 나온다.
+htmlspecialchars를 이용해서 script태그 사용하는 걸 막을 수 있다.
+strip_tags( 입력받아온 값, <허용하는 태그들>)==escaping 탈출,도망 (html 태그를 해석하는 것으로부터 얘는 대피시킨다.)
+->태그를 없애버린다라는 뜻이다.(선택적으로만 태그를 허용할 수 있다.)
+php.net라는 사이트에서 함수를 검색하면 자세하게 알 수 있다.
+
+*(3-3)보안3 (파일 phpjs/14.php , php/process.php )
+보안이 어떻게 뚫리는지 보여주는 영상이다.
+mysqli_real_escape_string( , )를 이용해서 
+url 을 조작해서 데이터베이스를 교란시키는 공격자의 의도를 막아낸다.
+
+
+
+

@@ -1,0 +1,40 @@
+1/16(목)
+
+*반복문( 파일 phpjs/9.php )
+javaScript랑 php 반복문은 차이가 없다.
+true면 반복되고 false면 반복이 끝이 난다.
+<ul><script> <li>ddddd</li></script></ul> 이렇게 표시하면 리스트 형식으로 바뀐다.
+
+*(1-1)배열 -배열( 파일 phpjs/10.php )
+javascript -> list=new Array("","",""); 형태로 배열을 선언한다.
+php -> $list = array("","","");  형태로 배열을 선언한다.
+배열을 쓰는 이유는 많은 데이터를 편하게 정리하기 위해서이다.
+배열의 길이를 알수 있는방법 
+javascript -> list.length
+php -> count($list)
+
+*(1-2)배열과 반복문( 파일 phpjs/11.php )
+배열과 반복문은 바늘과 실같은 사이이다.
+javascript   ->  "<li>"+list[i]+"</li>"
+php  ->    "<li>".$list[$i]."</li>"
+
+*(2-1)함수의 기본문법 (파일 phpjs/12.php )
+javaScript와 php 둘다 function function_name(){ } 로 함수를 정의한다.
+
+*(2-2)함수의 입력과 출력(파일 phpjs/13.php )
+내장된 함수 예로 prompt, write 등을 볼 수 있다.
+
+*UI vs API 
+UI(User Interface) : 사용자가 직접 조작하는 인터페이스.
+API(Application Programming Interface) : 애플리케이션이 javascript 문법에 따라서 웹브라우저에게 전달한 명령을 api 라고한다.
+지금 시대가 "API전성시대" 라고 해도 무관할 정도이다.
+
+*프로그래밍 접근방법
+적정 용도의 언어를 적정 수준으로 배우세요.-> API를 탐험해보세요. -> 그것을 좋아할 관객을 찾으세요.
+->한계를 경험하세요.->더 잘 만들고 싶을때->더잘 할 수 있는 방법에 대한 연구를 찾으세요.
+->대학의 전공과정->Computational Thinking(컴퓨터사고력)->알고리즘,데이터스트럭쳐,디자인패턴,프래임웍크,컴퓨터구조,....
+->좀 더 사적인 얘기(https://opentutorials.org/course/1189)
+
+
+
+
